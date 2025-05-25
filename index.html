@@ -9,11 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play assignment 2.</tw-noscript></noscript></tw-story>
-<tw-storydata name="assignment 2" startnode="8" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="9057CFD7-29CC-40E9-9DEC-B322CAEF05C4" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story[tags~="title-background"] {  /* the tag added in step 2 */
-  background-image: url(./images/bedroom.jpg);  /* the image added in step 1 */
-  background-size: cover;  /* cover the whole element */
-  background-repeat: no-repeat;  /* do not repeat the background image */
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">/*! Image Map Resizer (imageMapResizer.min.js ) - v1.0.10 - 2019-04-10
+<tw-storydata name="assignment 2" startnode="8" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="9057CFD7-29CC-40E9-9DEC-B322CAEF05C4" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript">/*! Image Map Resizer (imageMapResizer.min.js ) - v1.0.10 - 2019-04-10
  *  Desc: Resize HTML imageMap to scaled image.
  *  Copyright: (c) 2019 David J. Bradshaw - dave@bradshaw.net
  *  License: MIT
@@ -21,6 +17,7 @@
 
 !function(){"use strict";function r(){function e(){var r={width:u.width/u.naturalWidth,height:u.height/u.naturalHeight},a={width:parseInt(window.getComputedStyle(u,null).getPropertyValue("padding-left"),10),height:parseInt(window.getComputedStyle(u,null).getPropertyValue("padding-top"),10)};i.forEach(function(e,t){var n=0;o[t].coords=e.split(",").map(function(e){var t=1==(n=1-n)?"width":"height";return a[t]+Math.floor(Number(e)*r[t])}).join(",")})}function t(e){return e.coords.replace(/ *, */g,",").replace(/ +/g,",")}function n(){clearTimeout(d),d=setTimeout(e,250)}function r(e){return document.querySelector('img[usemap="'+e+'"]')}var a=this,o=null,i=null,u=null,d=null;"function"!=typeof a._resize?(o=a.getElementsByTagName("area"),i=Array.prototype.map.call(o,t),u=r("#"+a.name)||r(a.name),a._resize=e,u.addEventListener("load",e,!1),window.addEventListener("focus",e,!1),window.addEventListener("resize",n,!1),window.addEventListener("readystatechange",e,!1),document.addEventListener("fullscreenchange",e,!1),u.width===u.naturalWidth&&u.height===u.naturalHeight||e()):a._resize()}function e(){function t(e){e&&(!function(e){if(!e.tagName)throw new TypeError("Object is not a valid DOM element");if("MAP"!==e.tagName.toUpperCase())throw new TypeError("Expected <MAP> tag, found <"+e.tagName+">.")}(e),r.call(e),n.push(e))}var n;return function(e){switch(n=[],typeof e){case"undefined":case"string":Array.prototype.forEach.call(document.querySelectorAll(e||"map"),t);break;case"object":t(e);break;default:throw new TypeError("Unexpected data type ("+typeof e+").")}return n}}"function"==typeof define&&define.amd?define([],e):"object"==typeof module&&"object"==typeof module.exports?module.exports=e():window.imageMapResize=e(),"jQuery"in window&&(window.jQuery.fn.imageMapResize=function(){return this.filter("map").each(r).end()})}();
 //# sourceMappingURL=imageMapResizer.map
+
 
 
 // Harlowe Macro Framework, by Chapel; version 1.0.2
@@ -32,13 +29,14 @@
     &lt;area target=&quot;&quot; alt=&quot;1&quot; title=&quot;1&quot; href=&quot;&quot; coords=&quot;616,384,684,370,685,315,736,304,739,434,678,440,674,488,611,490&quot; shape=&quot;poly&quot;&gt;
     &lt;area target=&quot;&quot; alt=&quot;2&quot; title=&quot;2&quot; href=&quot;&quot; coords=&quot;194,226,303,216,298,300,190,312&quot; shape=&quot;poly&quot;&gt;
 &lt;/map&gt;
+
 &lt;script&gt;
  $(&#39;area&#39;).on(&#39;click&#39;, function(e){
    e.preventDefault();
    Harlowe.goto(this.alt);
  });
  $(&#39;map&#39;).imageMapResize();
-&lt;/script&gt;
+&lt;/script
 
 &lt;div style=&quot;display:none;&quot;
 [[1]]
@@ -58,7 +56,8 @@
    e.preventDefault();
    Harlowe.goto(this.alt);
  });
-&lt;/script&gt;
+ $(&#39;map&#39;).imageMapResize();
+&lt;/script
 
 &lt;div style=&quot;display:none;&quot;
 [[bed]]
@@ -71,13 +70,14 @@
 &lt;img src=&quot;./images/mirror.JPG&quot; usemap=&quot;#image-map&quot;&gt;
     &lt;area target=&quot;&quot; alt=&quot;1&quot; title=&quot;1&quot; href=&quot;&quot; coords=&quot;616,380,687,377,685,314,738,308,735,434,677,439,676,487,615,486&quot; shape=&quot;poly&quot;&gt;
 &lt;/map&gt;
+
 &lt;script&gt;
  $(&#39;area&#39;).on(&#39;click&#39;, function(e){
    e.preventDefault();
    Harlowe.goto(this.alt);
  });
  $(&#39;map&#39;).imageMapResize();
-&lt;/script&gt;
+&lt;/script
 
 &lt;div style=&quot;display:none;&quot;
 [[1]]&gt;
@@ -97,19 +97,22 @@
     &lt;area target=&quot;&quot; alt=&quot;dogs&quot; title=&quot;dogs&quot; href=&quot;&quot; coords=&quot;193,222,303,220,297,299,191,307&quot; shape=&quot;poly&quot;&gt;
     &lt;area target=&quot;&quot; alt=&quot;3&quot; title=&quot;3&quot; href=&quot;&quot; coords=&quot;552,195,547,286,575,292,577,321,607,319,609,303,687,302,735,287,729,182&quot; shape=&quot;poly&quot;&gt;
 &lt;/map&gt;
+
 &lt;script&gt;
  $(&#39;area&#39;).on(&#39;click&#39;, function(e){
    e.preventDefault();
    Harlowe.goto(this.alt);
  });
  $(&#39;map&#39;).imageMapResize();
-&lt;/script&gt;
+&lt;/script 
 
 &lt;div style=&quot;display:none;&quot;
 [[1]]
 [[2]]
 [[3]]&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name="title screen" tags="title-background" position="575,225" size="100,100">[[start]]</tw-passagedata><tw-passagedata pid="9" name="bedside table" tags="" position="725,500" size="100,100">hm...nothing here.</tw-passagedata></tw-storydata>
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name="title screen" tags="" position="575,225" size="100,100">[[start]]
+
+&lt;img class=&quot;story-image&quot; src=&quot;./images/bedoom.jpg&quot; alt=&quot;bedroom&quot; /&gt;</tw-passagedata><tw-passagedata pid="9" name="bedside table" tags="" position="725,500" size="100,100">hm...nothing here.</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
